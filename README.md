@@ -2,7 +2,7 @@
 
 A real-time AI meeting copilot that listens to your mic and continuously surfaces 3 useful suggestions based on what's being said. Built for the TwinMind engineering assignment.
 
-**[Live Demo →](https://your-deployment-url.vercel.app)** · **[GitHub →](https://github.com/eth-developer03/twinmind)**
+**[Live Demo →](https://twinmind-alpha.vercel.app)** · **[GitHub →](https://github.com/eth-developer03/twinmind)**
 
 ---
 
