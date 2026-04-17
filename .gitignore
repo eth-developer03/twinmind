@@ -1,0 +1,31 @@
+.env.local
+.next
+node_modules
+# dependencies
+node_modules/
+
+# next build output
+.next/
+out/
+
+# production
+build/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env files
+.env.local
+.env.*.local
+
+# optional: keep .env but ignore sensitive variants
+# .env   (only if you want to ignore it too)
+
+# OS files
+.DS_Store
+
+# Vercel
+.vercel
