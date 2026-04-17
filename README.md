@@ -96,7 +96,7 @@ Triggered on demand (button click). Instructs the model to structure output as:
 - **Live Suggestions** — 3 fresh suggestions per refresh; auto-refreshes every 30s; newest batch on top, older batches faded below; manual refresh button
 - **Chat Panel** — click suggestion → detailed streamed answer; type questions directly; one continuous session
 - **Settings** — full prompt editor, context windows, API key, refresh interval — all persisted to `localStorage`
-- **Export** — full session JSON: transcript + every batch + chat with timestamps
+- **Export** — click the export button in the header → downloads full session as JSON: every transcript chunk + every suggestion batch + full chat history, all with timestamps. Ready to share or review after the meeting
 
 ### Added Beyond Requirements
 
@@ -110,18 +110,21 @@ Detects `interview / sales / brainstorm / lecture / general` from the transcript
 Separate tab in the chat column. Extracts tasks, personal commitments, and scheduled events from the transcript automatically. Shows assignee and deadline tags when mentioned. Prompt covers both meeting commitments and personal intentions.
 
 **4. One-Click Meeting Summary**
-"∑ Summarize" button streams a structured summary (Key Points / Decisions / Action Items / Open Questions) directly into the chat. Useful for sharing notes after the session.
+"∑ Summarize" button in the chat panel header streams a structured summary directly into chat — formatted as **Key Points / Decisions Made / Action Items / Open Questions** with full markdown rendering (bold, bullets, headers). One click to get shareable meeting notes at any point during the session.
 
 **5. Copy Button on Suggestions**
-Hover any suggestion card → copy icon appears → one click copies to clipboard → brief "✓" confirmation. Small feature, high real-world utility.
+Hover any suggestion card → copy icon appears → one click copies the suggestion text to clipboard → brief "✓" confirmation. Lets you paste a suggestion directly into Slack, email, or notes without clicking into chat.
 
-**6. Suggestion Feedback (👍/👎)**
+**6. Export Full Session**
+Header button exports everything as a timestamped JSON file: full transcript, every suggestion batch with types, and complete chat history. Used to review sessions after the fact or share with teammates.
+
+**7. Suggestion Feedback (👍/👎)**
 Hover any card to rate it. 👎 signals are passed into the next suggestion prompt as "do not repeat suggestions similar to these" — closes the feedback loop.
 
-**7. Markdown Rendering in Chat**
+**8. Markdown Rendering in Chat**
 Assistant responses render with proper bold, headers, and bullet points via `react-markdown`. Especially noticeable in meeting summaries.
 
-**8. Live Transcript Highlights + Insights Bar**
+**9. Live Transcript Highlights + Insights Bar**
 Numbers highlighted blue, questions green, action words yellow. Insights bar shows live word count, question count, and suggestion totals.
 
 ---
